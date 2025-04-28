@@ -1,0 +1,304 @@
+/* Basic Reset & Body Styling - Preto com Dourado */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Fundo preto */
+    color: #ffffff; /* Texto branco */
+    line-height: 1.6;
+}
+
+/* Header & Navigation - Preto com Dourado */
+header {
+    background-color: #000000; /* Fundo preto */
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #D4AF37; /* Dourado */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #D4AF37; /* Dourado on hover */
+}
+
+/* Main Content Sections */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #222;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+    color: #D4AF37; /* Dourado para títulos */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #eee; /* Slightly less prominent heading color - maybe change to a lighter gold or keep white? Let's keep #eee for now */
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    margin: 2rem 0;
+    max-width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Buttons - Inspired by METODO-6D */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #D4AF37; /* Dourado */
+    color: #000000; /* Texto preto para contraste */
+}
+
+.btn-primary:hover {
+    background-color: #b89b2e; /* Dourado mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #D4AF37; /* Dourado */
+    border: 2px solid #D4AF37; /* Dourado */
+}
+
+.btn-secondary:hover {
+    background-color: #D4AF37; /* Dourado */
+    color: #000000; /* Texto preto para contraste */
+    transform: translateY(-2px);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Allow features to wrap */
+}
+
+.feature {
+    background-color: #111111; /* Preto mais claro */
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1; /* Allow flex items to grow and shrink */
+    min-width: 250px; /* Minimum width before wrapping */
+    border: 1px solid #D4AF37; /* Borda dourada */
+}
+
+/* Testimonials Section */
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.testimonial {
+    background-color: #111111; /* Preto mais claro */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #D4AF37; /* Borda esquerda dourada */
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial cite {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    color: #ccc;
+}
+
+/* Email Form Section */
+#comprar {
+    text-align: center;
+}
+
+#email-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #111111; /* Preto mais claro */
+    border-radius: 8px;
+    border: 1px solid #D4AF37; /* Borda dourada */
+}
+
+#email-form h3 {
+    margin-top: 0;
+    color: #D4AF37; /* Dourado */
+}
+
+#email-form input[type="text"],
+#email-form input[type="email"] {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #000000; /* Fundo preto */
+    color: #fff;
+    font-size: 1rem;
+}
+
+#email-form input::placeholder {
+    color: #aaa;
+}
+
+.btn-submit {
+    background-color: #D4AF37; /* Dourado */
+    color: #000000; /* Texto preto */
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #b89b2e; /* Dourado mais escuro */
+}
+
+.final-cta {
+    margin-top: 3rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 1rem;
+    }
+    nav ul li {
+        margin-left: 1rem;
+    }
+    .features {
+        flex-direction: column;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 80%;
+        max-width: 300px;
+    }
+}
