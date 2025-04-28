@@ -15,6 +15,7 @@
         <nav>
             <div class="logo">Maximizando Resultados</div>
             <ul>
+                <li><a href="#home">Página Inicial</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
                 <li><a href="#comprar">Comprar</a></li>
@@ -80,9 +81,35 @@
             <form id="email-form">
                 <h3>Deixe seu contato para mais informações:</h3>
                 <input type="text" id="name" name="name" placeholder="Seu Nome" required>
-                <input type="email" id="email" name="email" placeholder="Seu Melhor E-mail" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
                 <button type="submit" class="btn btn-submit">Enviar</button>
             </form>
+            <script>
+document.getElementById('meuFormulario').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const formData = {
+    nome: this.nome.value,
+    email: this.email.value
+  };
+  
+  fetch('https://script.google.com/macros/s/AKfycbyVX-IzVUO6cgyQozq6PoZ5q_ncmYdje8pTqy_mlC9-vWK3OUQHLqlsf3qj8kG4EESZ/exec', {
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: { 'Content-Type': 'application/json' }
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert('Dados enviados com sucesso!');
+    this.reset();
+  })
+  .catch(error => {
+    console.error('Erro:', error);
+    alert('Erro ao enviar os dados.');
+  });
+});
+</script>
+
             <div class="cta-buttons final-cta">
                 <a href="https://pay.kirvano.com/e7bf3ae4-c295-4a8c-a1f1-95bec5270a4e" class="btn btn-primary" target="_blank">QUERO O EBOOK</a>
                 <a href="https://pay.kirvano.com/77cd82ff-d1b0-41c0-8a4b-d32ee9931dd3" class="btn btn-secondary" target="_blank">QUERO A MENTORIA COMPLETA</a>
