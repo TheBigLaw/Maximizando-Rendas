@@ -150,14 +150,13 @@ h3 {
 }
 
 .btn-secondary {
-    background-color: transparent;
-    color: #D4AF37; /* Dourado */
+    background-color: #D4AF37;
+    color: #000000; /* Dourado */
     border: 2px solid #D4AF37; /* Dourado */
 }
 
 .btn-secondary:hover {
-    background-color: #D4AF37; /* Dourado */
-    color: #000000; /* Texto preto para contraste */
+    background-color: #b89b2e; /* Dourado */
     transform: translateY(-2px);
 }
 
