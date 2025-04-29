@@ -85,7 +85,7 @@
                 <button type="submit" class="btn btn-submit">Enviar</button>
             </form>
             
-           <script>
+ <script>
 document.getElementById('email-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -94,9 +94,11 @@ document.getElementById('email-form').addEventListener('submit', function(e) {
     email: document.getElementById('email').value
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbxlpNq6jIIlvBMnQwb7CwKWH4O80ZOT_vxfVWccF_yQpEcVf5mALFqiL3qL6M9yGFQQ/exec', {
+  fetch('https://script.google.com/macros/s/1RL5c6sb9RDyw-FbPnFy9mSgqBuFycE5kUcnxxXg7Xog/exec', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json'
+    },
     body: JSON.stringify(formData)
   })
   .then(response => {
@@ -104,12 +106,16 @@ document.getElementById('email-form').addEventListener('submit', function(e) {
     return response.json();
   })
   .then(data => {
-    alert('Dados enviados com sucesso!');
-    document.getElementById('email-form').reset();
+    if (data.status === "sucesso") {
+      alert('Dados enviados com sucesso!');
+      document.getElementById('email-form').reset();
+    } else {
+      throw new Error(data.mensagem);
+    }
   })
   .catch(error => {
     console.error('Erro ao enviar dados:', error);
-    alert('Erro ao enviar os dados.');
+    alert('Erro ao enviar os dados. Tente novamente mais tarde.');
   });
 });
 </script>
