@@ -6,3 +6,8 @@ document.querySelectorAll('nav a').forEach(anchor => {
         section.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+// CTA button alert
+document.querySelector('.cta-button').addEventListener('click', () => {
+    alert('Entre em contato conosco para mais informações!');
+});
