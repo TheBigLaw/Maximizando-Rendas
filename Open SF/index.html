@@ -4,55 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open Soluções Financeiras</title>
-     <link rel="shortcut icon" href="opensflogo.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="opensf.png" alt="OPEN Soluções Financeiras Logo">
+        <div class="container">
+            <img src="opensf.png" alt="Open Soluções Financeiras Logo">
+            <nav>
+                <a href="#home">Início</a>
+                <a href="#services">Serviços</a>
+                <a href="#about">Sobre Nós</a>
+                <a href="#contact">Contato</a>
+            </nav>
+        </div>
     </header>
-
-    <nav>
-        <a href="#home">Início</a>
-        <a href="#services">Serviços</a>
-        <a href="#about">Sobre Nós</a>
-        <a href="#contact">Contato</a>
-    </nav>
 
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>De portas abertas para o seu sucesso!</h1>
-            <p>Ajudando você a dar um passo em direção ao seu sonho!</p>
-            <button onclick="alert('Entre em contato conosco para mais informações!')">Saiba Mais</button>
+            <p>Soluções financeiras com sofisticação e segurança.</p>
+            <button class="cta-button">Descubra Agora</button>
         </div>
     </section>
 
     <section class="services" id="services">
-        <h2>Nossos Serviços</h2>
-        <div class="service-cards">
-            <div class="card">
-                <h3>Consórcios</h3>
-                <p>Adquira bens de forma planejada e sem juros com nossos planos de consórcio.</p>
-            </div>
-            <div class="card">
-                <h3>Financiamentos</h3>
-                <p>Opções de financiamento com taxas competitivas para atender às suas necessidades.</p>
-            </div>
-            <div class="card">
-                <h3>Consultoria Financeira</h3>
-                <p>Planejamento financeiro personalizado para alcançar seus objetivos.</p>
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3>Consórcios</h3>
+                    <p>Planeje a aquisição de bens sem juros, com segurança e flexibilidade.</p>
+                </div>
+                <div class="card">
+                    <h3>Financiamentos</h3>
+                    <p>Taxas competitivas para realizar seus projetos com tranquilidade.</p>
+                </div>
+                <div class="card">
+                    <h3>Consultoria</h3>
+                    <p>Planejamento financeiro personalizado para alcançar seus objetivos.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="about" id="about">
-        <h2>Sobre a OPEN</h2>
-        <p>Na Open Soluções Financeiras, acreditamos que o planejamento financeiro é a chave para transformar sonhos em realidade. Com anos de experiência no mercado, oferecemos soluções inovadoras e personalizadas para nossos clientes, sempre com transparência e segurança.</p>
+        <div class="container">
+            <h2>Quem Somos</h2>
+            <p>Na OPEN Soluções Financeiras, combinamos expertise e inovação para oferecer as melhores soluções financeiras. Nosso compromisso é transformar seus sonhos em realidade com transparência, segurança e um atendimento de excelência.</p>
+        </div>
     </section>
 
     <footer id="contact">
-        <p>© 2025 OPEN Soluções Financeiras. Todos os direitos reservados.</p>
-        <p><a href="mailto:contato@opensolucoes.com.br">solucoesfinanceirasopen@gmail.com</a> | (34) 99873-8863</p>
+        <div class="container">
+            <p>© 2025 OPEN Soluções Financeiras. Todos os direitos reservados.</p>
+            <p><a href="mailto:contato@opensolucoes.com.br">contato@opensolucoes.com.br</a> | (11) 1234-5678</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
