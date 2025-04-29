@@ -84,6 +84,7 @@
                 <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
                 <button type="submit" class="btn btn-submit">Enviar</button>
             </form>
+            
             <script>
 document.getElementById('email-form').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -93,7 +94,7 @@ document.getElementById('email-form').addEventListener('submit', function(e) {
     email: this.email.value
   };
 
-  fetch('https://script.google.com/macros/library/d/1bFf7AbNuFeBXidoH1PUt2IHzyxg4IhOP6uE8nsMNwWR4nSlxgh2HhY4c/2', {
+  fetch('https://script.google.com/macros/s/AKfycbwdM565-cVUcqgSkgKdUuHdSoTWrQ2JJ1lYl7WlBibJn2M3juY48gIHL2A_GWdRvOMc/exec', {
     method: 'POST',
     body: JSON.stringify(formData),
     headers: { 'Content-Type': 'application/json' }
@@ -109,6 +110,7 @@ document.getElementById('email-form').addEventListener('submit', function(e) {
   });
 });
 </script>
+            
             <div class="cta-buttons final-cta">
                 <a href="https://pay.kirvano.com/e7bf3ae4-c295-4a8c-a1f1-95bec5270a4e" class="btn btn-primary" target="_blank">QUERO O EBOOK</a>
                 <a href="https://pay.kirvano.com/77cd82ff-d1b0-41c0-8a4b-d32ee9931dd3" class="btn btn-secondary" target="_blank">QUERO A MENTORIA COMPLETA</a>
