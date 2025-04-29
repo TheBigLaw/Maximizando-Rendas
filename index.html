@@ -85,33 +85,35 @@
                 <button type="submit" class="btn btn-submit">Enviar</button>
             </form>
             
-            <script>
+           <script>
 document.getElementById('email-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
   const formData = {
-    nome: this.nome.value,
-    email: this.email.value
+    nome: document.getElementById('nome').value,
+    email: document.getElementById('email').value
   };
 
   fetch('https://script.google.com/macros/s/AKfycbxbO4bYmpsUV6w9z7FILMeymVJ1lJeDxX-lATe0hkFjFEeLXUJeG23q8SecUi8s8zUU/exec', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    nome: 'Seu Nome',
-    email: 'Seu E-mail'
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData)
   })
-})
-.then(response => response.json())
-.then(data => {
-  alert('Dados enviados com sucesso!');
-})
-.catch(error => {
-  console.error('Erro ao enviar dados:', error);
-  alert('Erro ao enviar os dados.');
+  .then(response => {
+    if (!response.ok) throw new Error('Erro na resposta da rede');
+    return response.json();
+  })
+  .then(data => {
+    alert('Dados enviados com sucesso!');
+    document.getElementById('email-form').reset();
+  })
+  .catch(error => {
+    console.error('Erro ao enviar dados:', error);
+    alert('Erro ao enviar os dados.');
+  });
 });
-
 </script>
+
             
             <div class="cta-buttons final-cta">
                 <a href="https://pay.kirvano.com/e7bf3ae4-c295-4a8c-a1f1-95bec5270a4e" class="btn btn-primary" target="_blank">QUERO O EBOOK</a>
