@@ -95,30 +95,22 @@ document.getElementById('email-form').addEventListener('submit', function(e) {
     email: document.getElementById('email').value
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbwiSgd7TMxtVA19i1L0Gr9QUnLBQ5f8F8zoyUJVIye5m4OrjEnPizmm1uddOhKF-TSg/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbzdcqlFbA3gDeUn1rES4suegM_XK0Zs8RXvmpXOwZNA5RgJejpx5r0qaWvLzLnDkLqz/exec', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData)
   })
-  .then(response => {
-    if (!response.ok) throw new Error('Erro na resposta da rede');
-    return response.json();
-  })
+  .then(response => response.json())
   .then(data => {
-    if (data.status === "sucesso") {
-      alert('Dados enviados com sucesso!');
-      document.getElementById('email-form').reset();
-    } else {
-      throw new Error(data.mensagem);
-    }
+    alert('Dados enviados com sucesso!');
+    document.getElementById('email-form').reset();
   })
   .catch(error => {
     console.error('Erro ao enviar dados:', error);
-    alert('Erro ao enviar os dados. Tente novamente mais tarde.');
+    alert('Erro ao enviar os dados.');
   });
 });
+
 </script>
 
             
