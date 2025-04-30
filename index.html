@@ -68,7 +68,7 @@
                     <p>"Excelentes estratégias!"</p>
                     <cite>- Erick Santos, Corretor de Imóveis</cite>
                 </div>
-                 <div class="testimonial">
+                <div class="testimonial">
                     <p>"Muito prático, gostei"</p>
                     <cite>- Maria De Lourdes, Promotora de Vendas</cite>
                 </div>
@@ -78,38 +78,38 @@
         <section id="comprar">
             <h2>NÃO PERCA MAIS VENDAS!</h2>
             <p>Adquira agora o eBook e a mentoria que vão transformar seus resultados.</p>
-          <form id="email-form">
-  <h3>Deixe seu contato para mais informações:</h3>
-  <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
-  <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
-  <button type="submit" class="btn btn-submit">Enviar</button>
-</form>
 
-            
-<script>
-document.getElementById('email-form').addEventListener('submit', function(e) {
-  e.preventDefault();
+            <form id="email-form">
+                <h3>Deixe seu contato para mais informações:</h3>
+                <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                <button type="submit" class="btn btn-submit">Enviar</button>
+            </form>
 
-  const form = new FormData();
-  form.append("nome", document.getElementById('nome').value);
-  form.append("email", document.getElementById('email').value);
+            <script>
+                document.getElementById('email-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
 
-  fetch('https://script.google.com/macros/s/AKfycby2u3geoKSsoR9n0_6AzhbRdhX4LA-wftyKWGrcCscA1WMIptM9eX4Vu13CspY3Ul4b/exec', {
-    method: 'POST',
-    body: form
-  })
-  .then(response => response.json())
-  .then(data => {
-    alert('Dados enviados com sucesso!');
-    document.getElementById('email-form').reset();
-  })
-  .catch(error => {
-    console.error('Erro ao enviar dados:', error);
-    alert('Erro ao enviar os dados.');
-  });
-});
-</script>
-            
+                    const form = new FormData();
+                    form.append("nome", document.getElementById('nome').value);
+                    form.append("email", document.getElementById('email').value);
+
+                    fetch('https://script.google.com/macros/s/AKfycby2u3geoKSsoR9n0_6AzhbRdhX4LA-wftyKWGrcCscA1WMIptM9eX4Vu13CspY3Ul4b/exec', {
+                        method: 'POST',
+                        body: form
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert('Dados enviados com sucesso!');
+                        document.getElementById('email-form').reset();
+                    })
+                    .catch(error => {
+                        console.error('Erro ao enviar dados:', error);
+                        alert('Erro ao enviar os dados.');
+                    });
+                });
+            </script>
+
             <div class="cta-buttons final-cta">
                 <a href="https://pay.kirvano.com/e7bf3ae4-c295-4a8c-a1f1-95bec5270a4e" class="btn btn-primary" target="_blank">QUERO O EBOOK</a>
                 <a href="https://pay.kirvano.com/77cd82ff-d1b0-41c0-8a4b-d32ee9931dd3" class="btn btn-secondary" target="_blank">QUERO A MENTORIA COMPLETA</a>
@@ -120,7 +120,6 @@ document.getElementById('email-form').addEventListener('submit', function(e) {
     <footer>
         <p>© 2025 Exploda Suas Vendas. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
