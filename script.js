@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const name = document.getElementById("nome").value;
             const email = document.getElementById("email").value;
             <script>
-document.getElementById('meuFormulario').addEventListener('submit', function(e) {
+document.getElementById('email-form').addEventListener('submit', function(e) {
   e.preventDefault();
   
   const formData = {
@@ -16,7 +16,7 @@ document.getElementById('meuFormulario').addEventListener('submit', function(e) 
     email: this.email.value
   };
   
-  fetch('https://script.google.com/macros/s/AKfycbyVX-IzVUO6cgyQozq6PoZ5q_ncmYdje8pTqy_mlC9-vWK3OUQHLqlsf3qj8kG4EESZ/exec', {
+  fetch('https://script.google.com/macros/s/AKfycby2u3geoKSsoR9n0_6AzhbRdhX4LA-wftyKWGrcCscA1WMIptM9eX4Vu13CspY3Ul4b/exec', {
     method: 'POST',
     body: JSON.stringify(formData),
     headers: { 'Content-Type': 'application/json' }
