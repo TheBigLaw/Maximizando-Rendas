@@ -86,21 +86,18 @@
 </form>
 
             
- <script>
+<script>
 document.getElementById('email-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const formData = {
-    nome: document.getElementById('nome').value,
-    email: document.getElementById('email').value
-  };
+  const form = new FormData();
+  form.append("nome", document.getElementById('nome').value);
+  form.append("email", document.getElementById('email').value);
 
   fetch('https://script.google.com/macros/s/AKfycbzEZsEO7cg4QbPSLRi8hCFOh_3V-ClG0_uf1ZcX52cTA9hdaGWJaYfN75IItHZPZiYE/exec', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(formData),
-  mode: 'cors'
-})
+    method: 'POST',
+    body: form
+  })
   .then(response => response.json())
   .then(data => {
     alert('Dados enviados com sucesso!');
@@ -111,9 +108,7 @@ document.getElementById('email-form').addEventListener('submit', function(e) {
     alert('Erro ao enviar os dados.');
   });
 });
-
 </script>
-
             
             <div class="cta-buttons final-cta">
                 <a href="https://pay.kirvano.com/e7bf3ae4-c295-4a8c-a1f1-95bec5270a4e" class="btn btn-primary" target="_blank">QUERO O EBOOK</a>
