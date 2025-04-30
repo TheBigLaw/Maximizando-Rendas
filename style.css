@@ -29,7 +29,7 @@
         }
 
         .logo {
-            width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+            width: 80px; /* Ajuste o tamanho da logo conforme necessário */
             height: auto;
         }
 
@@ -299,7 +299,7 @@
                 font-size: 1.4rem; /* Reduz o tamanho do título em telas menores */
             }
             .logo {
-                width: 120px; /* Reduz o tamanho da logo em telas menores */
+                width: 50px; /* Reduz o tamanho da logo em telas menores */
             }
             nav {
                 flex-direction: column;
