@@ -82,7 +82,7 @@
             <form id="email-form">
                 <h3>Deixe seu contato para mais informações:</h3>
                 <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
-                <input type="text" id="email" name="email" placeholder="Seu telefone" required>
+                <input type="text" id="telefone" name="telefone" placeholder="Seu telefone" required>
                 <button type="submit" class="btn btn-submit">Enviar</button>
             </form>
 
@@ -92,7 +92,7 @@
 
                     const form = new FormData();
                     form.append("nome", document.getElementById('nome').value);
-                    form.append("email", document.getElementById('email').value);
+                    form.append("telefone", document.getElementById('telefone').value);
 
                     fetch('https://script.google.com/macros/s/AKfycby2u3geoKSsoR9n0_6AzhbRdhX4LA-wftyKWGrcCscA1WMIptM9eX4Vu13CspY3Ul4b/exec', {
                         method: 'POST',
