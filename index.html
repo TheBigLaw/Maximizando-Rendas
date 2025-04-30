@@ -95,11 +95,12 @@ document.getElementById('email-form').addEventListener('submit', function(e) {
     email: document.getElementById('email').value
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbwML01Hoa47fT_lCIfeQL67D4IuZZgxeVNf663wmcuSE9nsR3eoeZ3WgbGq-oN6OPzC/exec', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(formData)
-  })
+  fetch('https://script.google.com/macros/s/AKfycbwW_zaSPt1DRgjoNjYTFbl4XU3vTcyCNCzYCjKYATmu5ENl70joDZDuYBl9HcmIUuoQ/exec', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData),
+  mode: 'cors'
+})
   .then(response => response.json())
   .then(data => {
     alert('Dados enviados com sucesso!');
