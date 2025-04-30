@@ -7,7 +7,3 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// CTA button alert
-document.querySelector('.cta-button').addEventListener('click', () => {
-    alert('Entre em contato conosco para mais informações!');
-});
