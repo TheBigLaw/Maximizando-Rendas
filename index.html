@@ -172,7 +172,7 @@ src="https://www.facebook.com/tr?id=720038360461567&ev=PageView&noscript=1"
         function updateCountdown() {
             const now = new Date();
             const endDate = new Date();
-            endDate.setDate(now.getDate() + 3); // 3 dias a partir de hoje
+            endDate.setDate(now.getDate() + 0); // 3 dias a partir de hoje
             endDate.setMinutes(now.getMinutes() + 60); // Final do dia
             
             const timeLeft = endDate - now;
